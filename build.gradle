@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+}
+
+group 'net.penguinsan'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'net.penguinsan.mutex.Main'
+}
+
+dependencies {
+    implementation "redis.clients:jedis:3.6.0"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
